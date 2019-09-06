@@ -1,16 +1,13 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: BriAnn's Suzuki Piano Studio
+image: /img/sepia_piano_keys1920.jpg
+heading: Suzuki Piano Studio
+subheading: All children can be well educated
 mainpitch:
-  title: Why Kaldi
+  title: Why Suzuki
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    More than fifty years ago, Japanese violinist Shinichi Suzuki realized the implications of the fact that children the world over learn to speak their native language with ease. He began to apply the basic principles of language acquisition to the learning of music, and called his method the mother-tongue approach. The ideas of parent responsibility, loving encouragement, constant repetition, etc., are some of the special features of the Suzuki approach.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
