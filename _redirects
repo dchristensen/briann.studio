@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://serene-leavitt-813dfd.netlify.com/* https://briann.studio/:splat 301!
