@@ -1,0 +1,25 @@
+/*
+	Horizons by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+/* Basic */
+@media (min-width: 1281px) and (max-width: 1680px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 12pt;
+    line-height: 1.5em;
+  }
+
+  .container {
+    width: 1200px;
+  }
+
+  .row {
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+}

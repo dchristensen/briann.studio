@@ -5,6 +5,46 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "BriAnn Christensen's Suzuki Studio",
+    description: "",
+  },
+
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/PageLayout.tsx"),
+        },
+        gatsbyRemarkPlugins: ["gatsby-remark-embedder"],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "events",
+        path: `${__dirname}/src/data/events`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "news",
+        path: `${__dirname}/src/data/news`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-yaml",
+  ],
 }
