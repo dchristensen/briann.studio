@@ -729,55 +729,13 @@ input[type="button"].small,
   z-index: 1;
 }
 
-.homepage #header {
-  padding: 2em 0;
+#header {
+  padding: 1em 0;
   background-position: center;
 }
 
 #logo {
   font-size: 2em;
-}
-
-#nav {
-  background-color: #0e0e0e88;
-  border-radius: 25px;
-}
-
-#nav > ul {
-  margin: 0;
-}
-
-#nav > ul > li {
-  border-radius: 10px;
-  display: inline-block;
-  margin-left: 0.5em;
-  padding: 0.5em 1.5em;
-}
-
-#nav > ul > li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-#nav > ul > li:first-child {
-  margin-left: 0;
-}
-
-#nav > ul > li:hover a {
-  color: #fff;
-}
-
-#nav > ul > li:hover {
-  background: #111111;
-}
-
-#nav > ul > li:hover a {
-  color: white;
-}
-
-#nav > ul > li > ul {
-  display: none;
 }
 
 /* Dropotron */
@@ -912,7 +870,7 @@ input[type="button"].small,
 /* Others */
 
 .template-credit {
-  font-size: 0.8em;
+  font-size: 0.6em;
   text-align: center;
 }
 

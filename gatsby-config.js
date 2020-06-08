@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "BriAnn Christensen's Suzuki Studio",
+    title: "BriAnn's Suzuki Studio",
     description: "",
   },
 

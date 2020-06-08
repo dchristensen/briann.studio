@@ -1,18 +1,14 @@
-import React from "react"
 import { withPrefix } from "gatsby"
+import React from "react"
 import { Helmet } from "react-helmet"
-import StudentImageGallery from "./StudentImageGallery"
-import Footer from "./Footer"
-import Header from "./Header"
-import Main from "./Main"
+import useSiteMetadata from "./SiteMetadata"
 
 import "../styles/style.css"
-import "../styles/style-wide.css"
-import "../styles/style-normal.css"
-import "../styles/style-narrow.css"
-import "../styles/style-narrower.css"
 import "../styles/style-mobile.css"
-import useSiteMetadata from "./SiteMetadata"
+import "../styles/style-narrower.css"
+import "../styles/style-normal.css"
+import "../styles/style-wide.css"
+import "../styles/nav.css"
 
 export interface LayoutProps {
   children: React.ReactNode
