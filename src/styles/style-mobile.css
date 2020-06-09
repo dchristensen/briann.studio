@@ -18,7 +18,7 @@
   }
 
   .row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(360px, 1fr);
     column-gap: 15px;
     row-gap: 15px;
   }

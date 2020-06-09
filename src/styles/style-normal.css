@@ -79,3 +79,9 @@
     font-size: 1.5em;
   }
 }
+
+@media (min-width: 841px) and (max-width: 960px) {
+  .container {
+    width: 95vw;
+  }
+}

@@ -154,9 +154,13 @@ body {
 
 .row {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(20px, 1fr));
   column-gap: 50px;
   row-gap: 50px;
+}
+
+.row > * {
+  max-width: 100%;
 }
 
 .\31 2u {
@@ -877,6 +881,9 @@ input[type="button"].small,
 .calendar-container > iframe {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: 600px;
+  max-width: 800px;
 }
 
 blockquote > p {
@@ -931,6 +938,7 @@ blockquote > p {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+  flex-wrap: wrap;
   margin: 0 30px;
 }
 
@@ -945,4 +953,10 @@ blockquote > p {
 .events-container .event .yt-video {
   width: 400px;
   height: 225px;
+}
+
+@media (max-width: 840px) {
+  .calendar-container > iframe {
+    height: 500px;
+  }
 }
