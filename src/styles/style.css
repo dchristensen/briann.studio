@@ -955,6 +955,24 @@ blockquote > p {
   height: 225px;
 }
 
+.events-alert {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.2em;
+  color: white;
+}
+
+.events-alert > div {
+  margin: 0 1em;
+}
+
+.events-message {
+  text-align: center;
+  vertical-align: middle;
+}
+
 @media (max-width: 840px) {
   .calendar-container > iframe {
     height: 500px;
