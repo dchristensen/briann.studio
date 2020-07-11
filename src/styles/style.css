@@ -977,4 +977,17 @@ blockquote > p {
   .calendar-container > iframe {
     height: 500px;
   }
+
+  .events-alert {
+    padding: 1rem;
+  }
+  
+  .events-alert > .icon svg { 
+    width: 30px;
+    height: 30px;
+  }
+
+  .events-alert > div {
+    margin: 0 0.3em;
+  }
 }
