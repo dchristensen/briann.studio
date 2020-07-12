@@ -50,7 +50,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="icon">
-                  <a href="" title="Instagram">
+                  <a href="https://www.instagram.com/briannsuzukistudio/" title="Instagram">
                     <InstagramIcon />
                   </a>
                 </li>
