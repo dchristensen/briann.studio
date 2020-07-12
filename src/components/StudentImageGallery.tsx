@@ -5,28 +5,33 @@ import "react-image-gallery/styles/css/image-gallery.css"
 
 export default function StudentImageGallery() {
   const data = useStaticQuery<DataProps>(graphql`
-    query {
-      allImageSharp(sort: { fields: id }) {
+    {
+      allFile(
+        sort: { fields: modifiedTime, order: DESC }
+        filter: { sourceInstanceName: { eq: "images" } }
+      ) {
         edges {
           node {
-            thumbnail: resize(width: 100) {
-              src
-              width
-              originalName
-            }
-            fullSize: resize(width: 800) {
-              src
-              width
-              originalName
+            childImageSharp {
+              thumbnail: resize(width: 100) {
+                src
+                width
+                originalName
+              }
+              fullSize: resize(width: 800) {
+                src
+                width
+                originalName
+              }
             }
           }
         }
       }
     }
   `)
-  const images: ReactImageGalleryItem[] = data.allImageSharp.edges.map(x => ({
-    thumbnail: x.node.thumbnail.src,
-    original: x.node.fullSize.src,
+  const images: ReactImageGalleryItem[] = data.allFile.edges.map(x => ({
+    thumbnail: x.node.childImageSharp.thumbnail.src,
+    original: x.node.childImageSharp.fullSize.src,
   }))
 
   return (
@@ -54,11 +59,13 @@ type ImageProps = {
 }
 
 type DataProps = {
-  allImageSharp: {
+  allFile: {
     edges: {
       node: {
-        thumbnail: ImageProps
-        fullSize: ImageProps
+        childImageSharp: {
+          thumbnail: ImageProps
+          fullSize: ImageProps
+        }
       }
     }[]
   }
