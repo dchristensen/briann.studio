@@ -2,3 +2,6 @@
   publish = "public"
   command = "gatsby build"
 
+[[redirects]]
+  from = /5pianoprogram
+  to = /static/18c22e13ccf20ba57673a801db322dd7/5%20Piano%20Program.pdf
