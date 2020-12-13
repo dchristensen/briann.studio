@@ -43,7 +43,7 @@ export default function Footer() {
               <ul className="icons">
                 <li className="icon">
                   <a
-                    href="https://www.youtube.com/channel/UCH2wdSbi1krQxlPHOUQe4Wg"
+                    href="https://www.youtube.com/channel/UCKdAFR-0CHW4rmSrTGT7rlQ"
                     title="YouTube"
                   >
                     <YouTubeIcon />
