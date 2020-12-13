@@ -67,7 +67,7 @@ function NewsItem(props: NewsNode) {
 
 export const pageQuery = graphql`
   {
-    allNewsYaml(sort: { fields: date, order: DESC }) {
+    allNewsYaml(sort: { fields: date, order: DESC }, limit: 10) {
       edges {
         node {
           id

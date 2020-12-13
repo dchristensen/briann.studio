@@ -5,7 +5,6 @@ import Layout from "../components/Layout"
 import Main from "../components/Main"
 import RecentEvents from "../components/RecentEvents"
 import StudentImageGallery from "../components/StudentImageGallery"
-import UpcomingEvents from "../components/UpcomingEvents"
 
 export default function Index() {
   return (
@@ -30,7 +29,6 @@ export default function Index() {
           </div>
         </div>
       </Header>
-      <UpcomingEvents />
       <StudentImageGallery />
       <Main>
         <RecentEvents />

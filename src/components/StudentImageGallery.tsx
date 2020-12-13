@@ -7,7 +7,7 @@ export default function StudentImageGallery() {
   const data = useStaticQuery<DataProps>(graphql`
     {
       allFile(
-        sort: { fields: modifiedTime, order: DESC }
+        sort: { fields: modifiedTime, order: ASC }
         filter: { sourceInstanceName: { eq: "images" } }
       ) {
         edges {
