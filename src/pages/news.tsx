@@ -76,7 +76,6 @@ export const pageQuery = graphql`
           photo {
             ...image400Fixed
           }
-          youtube
         }
       }
     }
