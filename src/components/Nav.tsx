@@ -31,7 +31,15 @@ export default function Nav() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            About
+            <ul>
+              <li>
+                <Link to="/about/me">Ms. BriAnn</Link>
+              </li>
+              <li>
+                <Link to="/about/suzuki">Suzuki Method</Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to="/calendar">Calendar</Link>
@@ -40,7 +48,15 @@ export default function Nav() {
             <Link to="/news">News</Link>
           </li>
           <li>
-            <Link to="/policies">Policies</Link>
+            <Link to="/studio">Studio</Link>
+            <ul>
+              <li>
+                <Link to="/studio/faq">FAQ</Link>
+              </li>
+              <li>
+                <Link to="/studio/policies">Policies</Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to="/resources">Resources</Link>

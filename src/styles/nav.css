@@ -1,8 +1,13 @@
 #nav {
-  background-color: #0e0e0e88;
-  border-radius: 25px;
-
   --transition-speed: 600ms;
+  --nav-bg-color: hsla(0, 0%, 5%, 0.5);
+  --nav-bg-color-opaque: hsl(0, 0%, 20%);
+  --nav-text-color: hsl(0, 0%, 100%);
+  --nav-highlight: hsl(0, 0%, 7%);
+
+  background-color: var(--nav-bg-color);
+  border-radius: 25px;
+  font-size: 1.2em;
 }
 
 #nav-toggle,
@@ -23,9 +28,8 @@
 }
 
 #nav > ul > li a {
-  color: #fff;
+  color: var(--nav-text-color);
   text-decoration: none;
-  font-size: 1.2em;
   width: 100%;
   height: 100%;
 }
@@ -34,20 +38,43 @@
   margin-left: 0;
 }
 
-#nav > ul > li:hover a {
-  color: #fff;
+#nav li:hover {
+  background: var(--nav-highlight);
 }
 
-#nav > ul > li:hover {
-  background: #111111;
-}
+@media (min-width: 841px) {
+  #nav > ul > li > ul {
+    display: none;
+  }
 
-#nav > ul > li:hover a {
-  color: white;
-}
+  #nav > ul > li:hover > ul {
+    display: block;
+  }
 
-#nav > ul > li > ul {
-  display: none;
+  #nav > ul > li > ul {
+    position: absolute;
+    top: 3em;
+    margin-left: -1.5em;
+    margin-top: -0.5em;
+    background: var(--nav-bg-color-opaque);
+    text-align: left;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  #nav > ul > li > ul > li {
+    padding: 0.25em 1.5em;
+  }
+
+  #nav > ul > li > ul > li:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  #nav > ul > li:hover {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 @media (max-width: 840px) {
@@ -117,6 +144,11 @@
     background-color: #555555;
   }
 
+  #nav li,
+  #nav li > a {
+    display: block;
+  }
+
   #nav > ul {
     display: flex;
     flex-direction: column;
@@ -129,5 +161,10 @@
   #nav > ul > li:hover,
   #nav > ul > li:focus-within {
     background-color: #555555;
+  }
+
+  #nav > ul > li > ul > li {
+    padding-left: 0.5em;
+    border-left: solid 1px hsl(0, 0%, 100%);
   }
 }
