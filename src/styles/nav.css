@@ -45,17 +45,22 @@
 @media (min-width: 841px) {
   #nav > ul > li > ul {
     display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-speed);
   }
 
   #nav > ul > li:hover > ul {
     display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   #nav > ul > li > ul {
     position: absolute;
     top: 3em;
     margin-left: -1.5em;
-    margin-top: -0.5em;
+    margin-top: -0.75em;
     background: var(--nav-bg-color-opaque);
     text-align: left;
     border-bottom-left-radius: 10px;
@@ -71,7 +76,7 @@
     border-bottom-right-radius: 10px;
   }
 
-  #nav > ul > li:hover {
+  #nav > ul > li.nav-nested:hover {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
