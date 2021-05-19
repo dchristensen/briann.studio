@@ -30,7 +30,7 @@ export default function Nav() {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="nav-nested">
             About
             <ul>
               <li>
@@ -47,7 +47,7 @@ export default function Nav() {
           <li>
             <Link to="/news">News</Link>
           </li>
-          <li>
+          <li className="nav-nested">
             <Link to="/studio">Studio</Link>
             <ul>
               <li>
