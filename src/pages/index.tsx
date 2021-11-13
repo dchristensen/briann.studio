@@ -17,11 +17,9 @@ export default function Index() {
                 <h2>BriAnn's Suzuki Studio</h2>
                 <span className="byline">
                   <em>
-                    &quot;Teaching music is not my main purpose. I want to make
-                    good citizens. If children hear fine music from the day of
-                    their birth and learn to play it, they develop sensitivity,
-                    discipline and endurance. They get a beautiful heart.&quot;
-                    -Dr. Suzuki
+                    &quot;It is in our power to educate all the children of the
+                    world to become a little better as people, a little
+                    happier.&quot; -Dr. Suzuki
                   </em>
                 </span>
               </header>
