@@ -31,7 +31,7 @@ export default function Nav() {
             <Link to="/">Home</Link>
           </li>
           <li className="nav-nested">
-            About
+            <Link to="/about/me">About</Link>
             <ul>
               <li>
                 <Link to="/about/me">Ms. BriAnn</Link>
@@ -48,7 +48,7 @@ export default function Nav() {
             <Link to="/news">News</Link>
           </li>
           <li className="nav-nested">
-            <Link to="/studio">Studio</Link>
+            <Link to="/studio/faq">Studio</Link>
             <ul>
               <li>
                 <Link to="/studio/faq">FAQ</Link>
