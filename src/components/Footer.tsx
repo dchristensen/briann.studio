@@ -12,7 +12,10 @@ export default function Footer() {
             <section>
               <ul className="default">
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about/me">About</Link>
                 </li>
                 <li>
                   <Link to="/calendar">Calendar</Link>
@@ -21,7 +24,7 @@ export default function Footer() {
                   <Link to="/news">News</Link>
                 </li>
                 <li>
-                  <Link to="/policies">Policies</Link>
+                  <Link to="/studio/faq">Studio</Link>
                 </li>
                 <li>
                   <Link to="/resources">Resources</Link>
@@ -50,7 +53,10 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="icon">
-                  <a href="https://www.instagram.com/briannsuzukistudio/" title="Instagram">
+                  <a
+                    href="https://www.instagram.com/briannsuzukistudio/"
+                    title="Instagram"
+                  >
                     <InstagramIcon />
                   </a>
                 </li>
