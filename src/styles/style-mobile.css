@@ -63,4 +63,8 @@
     font-size: 1em;
     margin: 0;
   }
+
+  .application-form {
+    width: 100%;
+  }
 }

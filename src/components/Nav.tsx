@@ -51,6 +51,9 @@ export default function Nav() {
             <Link to="/studio/faq">Studio</Link>
             <ul>
               <li>
+                <Link to="/studio/apply">Apply</Link>
+              </li>
+              <li>
                 <Link to="/studio/faq">FAQ</Link>
               </li>
               <li>

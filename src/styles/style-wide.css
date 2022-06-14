@@ -22,4 +22,8 @@
     column-gap: 40px;
     row-gap: 40px;
   }
+
+  .application-form {
+    width: 1200px;
+  }
 }

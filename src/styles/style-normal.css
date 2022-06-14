@@ -78,6 +78,10 @@
   #footer .major h2 {
     font-size: 1.5em;
   }
+
+  .application-form {
+    width: 800px;
+  }
 }
 
 @media (min-width: 841px) and (max-width: 960px) {
