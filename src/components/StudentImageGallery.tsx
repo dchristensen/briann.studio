@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
+import { shuffle } from "lodash"
+import React, { useMemo } from "react"
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery"
 import "react-image-gallery/styles/css/image-gallery.css"
 
@@ -29,10 +30,13 @@ export default function StudentImageGallery() {
       }
     }
   `)
+
   const images: ReactImageGalleryItem[] = data.allFile.edges.map(x => ({
     thumbnail: x.node.childImageSharp.thumbnail.src,
     original: x.node.childImageSharp.fullSize.src,
   }))
+
+  const shuffledImages = useMemo(() => shuffle(images), [images])
 
   return (
     <div className="wrapper style2">
@@ -40,7 +44,7 @@ export default function StudentImageGallery() {
         <div className="row">
           <section className="12u">
             <ImageGallery
-              items={images}
+              items={shuffledImages}
               autoPlay={true}
               showFullscreenButton={false}
               slideInterval={5000}
