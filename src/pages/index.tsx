@@ -1,10 +1,13 @@
 import React from "react"
+import Announcement from "../components/Announcement"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Layout from "../components/Layout"
 import Main from "../components/Main"
 import RecentEvents from "../components/RecentEvents"
 import StudentImageGallery from "../components/StudentImageGallery"
+
+import flyer from "./Parent Night Flier.png"
 
 export default function Index() {
   return (
@@ -27,6 +30,16 @@ export default function Index() {
           </div>
         </div>
       </Header>
+      <Announcement expires={new Date("2022-09-24T00:00:00-06:00")}>
+        Join us for "Deep Conversations" a free discussion for parents featuring
+        Suzuki Teacher Trainer Dr. Merlin B. Thompson.
+        <br />
+        September 23, 2022 - 7:30pm
+        <br />
+        <a href={flyer} target="_blank">
+          View the Flyer
+        </a>
+      </Announcement>
       <StudentImageGallery />
       <Main>
         <RecentEvents />
