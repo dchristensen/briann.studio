@@ -16,6 +16,7 @@ export default function Announcement({
   }
 
   return (
+    <>
     <div className="events-alert">
       <div className="icon">
         <Music />
@@ -25,5 +26,6 @@ export default function Announcement({
         <Music />
       </div>
     </div>
+    </>
   )
 }
