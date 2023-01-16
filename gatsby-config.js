@@ -19,7 +19,13 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/PageLayout.tsx"),
         },
-        gatsbyRemarkPlugins: ["gatsby-remark-embedder"],
+        gatsbyRemarkPlugins: ["gatsby-remark-embedder", "gatsby-remark-images"],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages`,
       },
     },
     {
