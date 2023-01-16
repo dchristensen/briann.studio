@@ -7,7 +7,7 @@ import Main from "../components/Main"
 import RecentEvents from "../components/RecentEvents"
 import StudentImageGallery from "../components/StudentImageGallery"
 
-import flyer from "./Parent Night Flier.png"
+import flyer from "./2022-Suzuki-Piano-Super-Activity.png"
 
 export default function Index() {
   return (
@@ -30,12 +30,18 @@ export default function Index() {
           </div>
         </div>
       </Header>
-      <Announcement expires={new Date("2022-09-24T00:00:00-06:00")}>
-        Join us for "Deep Conversations" a free discussion for parents featuring
-        Suzuki Teacher Trainer Dr. Merlin B. Thompson.
+      <Announcement expires={new Date("2023-02-05T00:00:00-06:00")}>
+        Join us for Utah Suzuki Piano State Super Activity. There will be music
+        classes for students of all ages and abilities, teen leadership and
+        performance opportunities, parent collaboration and support, yummy lunch
+        and more!
         <br />
-        September 23, 2022 - 7:30pm
+        February 4, 2023 - 9:00am - 1:00pm
         <br />
+        <a href="https://forms.gle/dfTwRtMUHFuAKqBDA" target="_blank">
+          Register
+        </a>
+        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
         <a href={flyer} target="_blank">
           View the Flyer
         </a>
