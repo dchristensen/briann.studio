@@ -9,9 +9,9 @@ export default function Announcement({
   children,
   expires,
 }: React.PropsWithChildren<AnnouncementProps>) {
-  console.log("announcement: ", { expires: expires, now: new Date(Date.now()) })
+  const isSSR = typeof window === "undefined"
 
-  if (expires !== undefined && Date.now() > expires.valueOf()) {
+  if (isSSR || (expires !== undefined && Date.now() > expires.valueOf())) {
     return null
   }
 
