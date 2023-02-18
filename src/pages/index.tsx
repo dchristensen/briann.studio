@@ -7,7 +7,7 @@ import Main from "../components/Main"
 import RecentEvents from "../components/RecentEvents"
 import StudentImageGallery from "../components/StudentImageGallery"
 
-import flyer from "./2022-Suzuki-Piano-Super-Activity.png"
+// import flyer from "./2022-Suzuki-Piano-Super-Activity.png"
 
 export default function Index() {
   return (
@@ -30,7 +30,7 @@ export default function Index() {
           </div>
         </div>
       </Header>
-      <Announcement expires={new Date("2023-02-05T00:00:00-06:00")}>
+      {/* <Announcement expires={new Date("2023-02-05T00:00:00-06:00")}>
         Join us for Utah Suzuki Piano State Super Activity. There will be music
         classes for students of all ages and abilities, teen leadership and
         performance opportunities, parent collaboration and support, yummy lunch
@@ -45,7 +45,7 @@ export default function Index() {
         <a href={flyer} target="_blank">
           View the Flyer
         </a>
-      </Announcement>
+      </Announcement> */}
       <StudentImageGallery />
       <Main>
         <RecentEvents />
