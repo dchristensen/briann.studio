@@ -13,29 +13,29 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.5",
-    "@mdx-js/react": "^1.6.5",
+    "@mdx-js/react": "^3.0.1",
     "@types/react-helmet": "^6.0.0",
     "@types/react-image-gallery": "^1.0.5",
-    "gatsby": "^4.23.0",
+    "gatsby": "^5.13.7",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-google-gtag": "^4.23.0",
-    "gatsby-plugin-mdx": "^3.16.1",
-    "gatsby-plugin-react-helmet": "^5.16.0",
-    "gatsby-plugin-sharp": "^4.16.1",
-    "gatsby-remark-embedder": "^6.0.0",
-    "gatsby-remark-images": "^6.25.0",
-    "gatsby-source-filesystem": "^4.16.0",
-    "gatsby-transformer-sharp": "^4.16.0",
-    "gatsby-transformer-yaml": "^4.16.0",
+    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-layout": "^4.13.1",
+    "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-remark-embedder": "^7.0.0",
+    "gatsby-remark-images": "^7.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "gatsby-transformer-yaml": "^5.13.1",
     "lodash": "^4.17.21",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.0.0",
     "react-image-gallery": "^1.0.7",
-    "typescript": "^4.7.3"
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "prettier": "^2.7.0"
+    "prettier": "^3.3.3"
   }
 }

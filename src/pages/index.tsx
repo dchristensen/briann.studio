@@ -11,7 +11,7 @@ import StudentImageGallery from "../components/StudentImageGallery"
 
 export default function Index() {
   return (
-    <Layout>
+    <>
       <Header>
         <div id="banner">
           <div className="container">
@@ -51,6 +51,6 @@ export default function Index() {
         <RecentEvents />
       </Main>
       <Footer />
-    </Layout>
+    </>
   )
 }

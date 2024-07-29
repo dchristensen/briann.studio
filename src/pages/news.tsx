@@ -1,7 +1,7 @@
 import { graphql, PageProps } from "gatsby"
 import Img, { FixedObject, FluidObject } from "gatsby-image"
 import React, { useLayoutEffect } from "react"
-import PageLayout from "../components/PageLayout"
+import { DefaultLayout } from "../components/PageLayout"
 import YouTubeVideo from "../components/YouTubeVideo"
 
 interface NewsNode {
@@ -22,13 +22,13 @@ type NewsQuery = {
 
 export default function News({ data }: PageProps<NewsQuery>) {
   return (
-    <PageLayout>
+    <DefaultLayout>
       <div className="news-container">
         {data.allNewsYaml.edges.map(x => (
           <NewsItem key={x.node.id} {...x.node} />
         ))}
       </div>
-    </PageLayout>
+    </DefaultLayout>
   )
 }
 
@@ -67,7 +67,7 @@ function NewsItem(props: NewsNode) {
 
 export const pageQuery = graphql`
   {
-    allNewsYaml(sort: { fields: date, order: DESC }, limit: 10) {
+    allNewsYaml(sort: { date: DESC }, limit: 10) {
       edges {
         node {
           id

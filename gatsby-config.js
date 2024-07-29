@@ -14,11 +14,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/PageLayout.tsx`),
+      },
+    },
+    {
       resolve: "gatsby-plugin-mdx",
       options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/PageLayout.tsx"),
-        },
         gatsbyRemarkPlugins: ["gatsby-remark-embedder", "gatsby-remark-images"],
       },
     },

@@ -18,7 +18,7 @@ type EventsQuery = {
 export default function RecentEvents() {
   const data = useStaticQuery<EventsQuery>(graphql`
     {
-      allEventsYaml(sort: {fields: date, order: DESC}, limit: 6) {
+      allEventsYaml(sort: { date: DESC }, limit: 6) {
         edges {
           node {
             id

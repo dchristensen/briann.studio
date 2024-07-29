@@ -12,7 +12,6 @@ export default function Nav() {
       <div id="nav-toggle">
         <button
           onClick={() => {
-            console.log("toggle")
             setOpen(prev => !prev)
           }}
         >

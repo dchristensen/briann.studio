@@ -1,9 +1,9 @@
 import React from "react"
-import PageLayout from "../components/PageLayout"
+import { DefaultLayout } from "../components/PageLayout"
 
 export default function Calendar() {
   return (
-    <PageLayout>
+    <DefaultLayout>
       <div className="calendar-container">
         <iframe
           src={
@@ -13,6 +13,6 @@ export default function Calendar() {
           scrolling="no"
         ></iframe>
       </div>
-    </PageLayout>
+    </DefaultLayout>
   )
 }
