@@ -1,14 +1,14 @@
-import { graphql, PageProps } from "gatsby"
-import Img, { FixedObject, FluidObject } from "gatsby-image"
 import React, { useLayoutEffect } from "react"
+import { graphql, PageProps } from "gatsby"
 import { DefaultLayout } from "../components/PageLayout"
 import YouTubeVideo from "../components/YouTubeVideo"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 interface NewsNode {
   id: string
   date: string
   title: string
-  photo: { childImageSharp: { fluid: FluidObject; fixed: FixedObject } } | null
+  photo: { childImageSharp: { gatsbyImageData: IGatsbyImageData } } | null
   youtube: string | null
 }
 
@@ -51,7 +51,10 @@ function NewsItem(props: NewsNode) {
     <div className="news-item">
       <div className="news-media">
         {props.photo && (
-          <Img fixed={props.photo.childImageSharp.fixed} alt={props.title} />
+          <GatsbyImage
+            image={props.photo.childImageSharp.gatsbyImageData}
+            alt={props.title}
+          />
         )}
         {props.youtube && <YouTubeVideo url={props.youtube} />}
       </div>
@@ -74,7 +77,15 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           photo {
-            ...image400Fixed
+            childImageSharp {
+              gatsbyImageData(
+                layout: FIXED
+                width: 400
+                height: 350
+                tracedSVGOptions: { color: "#AAAAAA" }
+                quality: 50
+              )
+            }
           }
         }
       }

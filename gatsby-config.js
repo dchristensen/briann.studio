@@ -59,6 +59,7 @@ module.exports = {
         path: `${__dirname}/src/data/documents`,
       },
     },
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-yaml",
