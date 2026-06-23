@@ -1,0 +1,65 @@
+---
+import { getMenu } from "emdash";
+import { createPublicPageContext } from "emdash/page";
+import { EmDashBodyEnd, EmDashBodyStart, EmDashHead } from "emdash/ui";
+
+import "../styles/nav.css";
+import "../styles/style-mobile.css";
+import "../styles/style-narrower.css";
+import "../styles/style-normal.css";
+import "../styles/style-wide.css";
+import "../styles/style.css";
+
+interface Props {
+  title?: string;
+  description?: string | null;
+  image?: string | null;
+  canonical?: string | null;
+  /** Pass content reference for plugin page contributions on content pages */
+  content?: { collection: string; id: string; slug?: string | null };
+}
+
+const { title, description, image, canonical, content } = Astro.props;
+const titlePrefix = (title ? title + " - " : "") + "BriAnn's Suzuki Studio";
+
+const { BASE_URL } = import.meta.env;
+
+const pageCtx = createPublicPageContext({
+  Astro,
+  kind: content ? "content" : "custom",
+  pageType: "website",
+  title,
+  description,
+  canonical,
+  image,
+  content,
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titlePrefix}</title>
+    {description && <meta name="description" content={description} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="apple-touch-icon" sizes="180x180" href={`${BASE_URL}img/apple-touch-icon.png`} />
+    <link rel="icon" type="image/png" href={`${BASE_URL}img/favicon-32x32.png`} sizes="32x32" />
+    <link rel="icon" type="image/png" href={`${BASE_URL}img/favicon-16x16.png`} sizes="16x16" />
+    <link rel="mask-icon" href={`${BASE_URL}img/safari-pinned-tab.svg`} color="#ff4400" />
+    <meta name="theme-color" content="#fff" />
+
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content="/" />
+    <EmDashHead page={pageCtx} />
+  </head>
+  <body>
+    <EmDashBodyStart page={pageCtx} />
+    <div class="homepage">
+      <slot />
+    </div>
+    <EmDashBodyEnd page={pageCtx} />
+  </body>
+</html>

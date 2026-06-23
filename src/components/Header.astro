@@ -1,0 +1,13 @@
+---
+import { getMenu } from "emdash";
+import Nav from "./Nav";
+
+const menu = await getMenu("primary");
+---
+
+<header id="header">
+  <div class="container">
+    <Nav client:load items={menu?.items ?? []} />
+    <slot />
+  </div>
+</header>

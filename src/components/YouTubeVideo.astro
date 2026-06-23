@@ -1,0 +1,22 @@
+---
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+
+const VideoIdRegex = /(.*?)(^|\/|v=)([a-z0-9_-]{11})(.*)?/im;
+const videoId = url.match(VideoIdRegex);
+---
+
+{
+  videoId && (
+    <iframe
+      class="yt-video"
+      src={"https://www.youtube.com/embed/" + videoId[3]}
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin"
+    />
+  )
+}

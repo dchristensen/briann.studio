@@ -1,0 +1,45 @@
+---
+import { getEmDashEntry, getSeoMeta } from "emdash";
+import { PortableText } from "emdash/ui";
+import DefaultLayout from "../layouts/Default.astro";
+
+const { entry: page, cacheHint } = await getEmDashEntry("pages", "studio-apply");
+
+Astro.cache.set(cacheHint);
+
+const seo = page
+  ? getSeoMeta(page, {
+      siteUrl: Astro.url.origin,
+      path: "/studio-apply",
+    })
+  : { title: undefined, description: undefined, canonical: undefined };
+---
+
+<DefaultLayout
+  title={seo.title}
+  description={seo.description}
+  canonical={seo.canonical}
+  content={page ? { collection: "pages", id: page.data.id, slug: "studio-apply" } : undefined}
+  >{
+    page && (
+      <article>
+        <h1 {...page.edit.title}>{page.data.title}</h1>
+
+        <div {...page.edit.content}>
+          <PortableText value={page.data.content} />
+        </div>
+      </article>
+    )
+  }
+  <iframe
+    class="application-form"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSc9NJUih6xKb-zFHZdp8wlwZnGnYTvRMFiXbILdHBkMuKgy6Q/viewform?embedded=true"
+    width="640"
+    height="2200"
+    frameborder="0"
+    marginheight={0}
+    marginwidth={0}
+  >
+    Loading…
+  </iframe>
+</DefaultLayout>

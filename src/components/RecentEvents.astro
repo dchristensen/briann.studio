@@ -1,0 +1,37 @@
+---
+import { getEmDashCollection } from "emdash";
+import YouTubeVideo from "./YouTubeVideo.astro";
+
+const { entries: events, cacheHint } = await getEmDashCollection("events", {
+  orderBy: { published_at: "desc" },
+  limit: 6,
+});
+
+Astro.cache.set(cacheHint);
+---
+
+<header class="major">
+  <h2>Recent Events</h2>
+  <span class="byline">Recitals, performances and other events</span>
+</header>
+<div class="row">
+  <div class="12u events-container">
+    {
+      events
+        .map((e) => e.data)
+        .map((event) => (
+          <div class="event">
+            {event.youtube && (
+              <div class="event-video">
+                <YouTubeVideo url={event.youtube} />
+              </div>
+            )}
+            <div>
+              <h3>{event.title}</h3>
+              {event.date}
+            </div>
+          </div>
+        ))
+    }
+  </div>
+</div>

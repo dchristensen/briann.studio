@@ -1,0 +1,41 @@
+---
+import { getEmDashCollection } from "emdash";
+import { Image } from "emdash/ui";
+import YouTubeVideo from "../components/YouTubeVideo.astro";
+import DefaultLayout from "../layouts/Default.astro";
+import type { News } from "../../emdash-env";
+
+const { entries: news, cacheHint } = await getEmDashCollection("news", {
+  orderBy: { date: "desc" },
+  limit: 10,
+});
+
+Astro.cache.set(cacheHint);
+---
+
+<DefaultLayout
+  title="News"
+  description="Latest news and updates from BriAnn's Suzuki Studio."
+  canonical={`${Astro.url.origin}/news`}
+>
+  <div class="news-container">
+    {
+      news
+        .map((n) => n.data)
+        .map((n) => (
+          <div class="news-item">
+            <div class="news-media">
+              {n.photo && <Image image={n.photo} style="max-width: 400px; max-height:340px;" />}
+              {n.youtube && <YouTubeVideo url={n.youtube} />}
+            </div>
+            <div>
+              <div class="news-headline" title={n.title}>
+                {n.title}
+              </div>
+              <div class="news-date">{n.date}</div>
+            </div>
+          </div>
+        ))
+    }
+  </div>
+</DefaultLayout>

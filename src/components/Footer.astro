@@ -1,0 +1,59 @@
+---
+import { WidgetArea } from "emdash/ui";
+import Instagram from "./icons/Instagram.astro";
+import YouTube from "./icons/YouTube.astro";
+import { getMenu } from "emdash";
+
+const menu = await getMenu("primary");
+---
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="8u">
+        <section>
+          <ul class="default">
+            {
+              menu?.items.map((item) => (
+                <li>
+                  <a href={item.url} target={item.target} title={item.titleAttr}>
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+      <div class="4u">
+        <section>
+          <ul class="contact">
+            <li>
+              <span class="mail">Mail</span>
+              <span>
+                <a href="mailto:briann@heavyd.net">briann@heavyd.net</a>
+              </span>
+            </li>
+            <li>
+              <ul class="icons">
+                <li class="icon">
+                  <a href="https://youtube.com/@briannssuzukipianostudio9374" title="YouTube">
+                    <YouTube />
+                  </a>
+                </li>
+                <li class="icon">
+                  <a href="https://www.instagram.com/briannsuzukistudio/" title="Instagram">
+                    <Instagram />
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <WidgetArea name="footer" />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</footer>

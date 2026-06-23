@@ -1,0 +1,301 @@
+ℹ Database: /workspaces/emdash-test/data/sqlite/data.db
+{
+	"$schema": "https://emdashcms.com/seed.schema.json",
+	"version": "1",
+	"meta": {
+		"name": "Exported Seed",
+		"description": "Exported from existing EmDash database"
+	},
+	"settings": {
+		"title": "BriAnn's Suzuki Studio",
+		"tagline": "BriAnn Christensen's Suzuki Piano Studio",
+		"url": "https://briann.studio/",
+		"timezone": "America/Denver"
+	},
+	"collections": [
+		{
+			"slug": "events",
+			"label": "Events",
+			"labelSingular": "Event",
+			"supports": [
+				"drafts",
+				"revisions",
+				"preview",
+				"search"
+			],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "youtube",
+					"label": "YouTube URL",
+					"type": "string"
+				},
+				{
+					"slug": "date",
+					"label": "Event Date",
+					"type": "datetime",
+					"required": true
+				}
+			]
+		},
+		{
+			"slug": "gallery_images",
+			"label": "Gallery Images",
+			"labelSingular": "Gallery Image",
+			"urlPattern": "/gallery/{slug}",
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"searchable": true
+				},
+				{
+					"slug": "image",
+					"label": "Image",
+					"type": "image",
+					"required": true
+				}
+			]
+		},
+		{
+			"slug": "news",
+			"label": "News",
+			"labelSingular": "News",
+			"supports": [
+				"drafts",
+				"preview",
+				"search"
+			],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "date",
+					"label": "Date",
+					"type": "datetime",
+					"required": true
+				},
+				{
+					"slug": "youtube",
+					"label": "YouTube URL",
+					"type": "string"
+				},
+				{
+					"slug": "photo",
+					"label": "Photo",
+					"type": "image"
+				}
+			]
+		},
+		{
+			"slug": "pages",
+			"label": "Pages",
+			"labelSingular": "Page",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search"
+			],
+			"urlPattern": "/{slug}",
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "content",
+					"label": "Content",
+					"type": "portableText",
+					"searchable": true
+				}
+			]
+		},
+		{
+			"slug": "posts",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "featured_image",
+					"label": "Featured Image",
+					"type": "image"
+				},
+				{
+					"slug": "content",
+					"label": "Content",
+					"type": "portableText",
+					"searchable": true
+				},
+				{
+					"slug": "excerpt",
+					"label": "Excerpt",
+					"type": "text"
+				}
+			]
+		}
+	],
+	"taxonomies": [
+		{
+			"name": "category",
+			"label": "Categories",
+			"labelSingular": "Category",
+			"hierarchical": true,
+			"collections": [
+				"posts"
+			],
+			"terms": [
+				{
+					"slug": "general",
+					"label": "General"
+				},
+				{
+					"slug": "updates",
+					"label": "Updates"
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"label": "Tags",
+			"labelSingular": "Tag",
+			"hierarchical": false,
+			"collections": [
+				"posts"
+			],
+			"terms": [
+				{
+					"slug": "example",
+					"label": "Example"
+				},
+				{
+					"slug": "starter",
+					"label": "Starter"
+				}
+			]
+		}
+	],
+	"menus": [
+		{
+			"name": "primary",
+			"label": "Primary Navigation",
+			"items": [
+				{
+					"type": "custom",
+					"label": "Home",
+					"url": "/"
+				},
+				{
+					"type": "pages",
+					"label": "About",
+					"ref": "01KNXETBRN5H4DXMRTH6HDXEKF",
+					"collection": "pages",
+					"children": [
+						{
+							"type": "pages",
+							"label": "Ms. BriAnn",
+							"ref": "01KNXETBRN5H4DXMRTH6HDXEKF",
+							"collection": "pages"
+						},
+						{
+							"type": "pages",
+							"label": "Suzuki",
+							"ref": "01KNZ5DZEDAJVHHP2RYBFTJSXN",
+							"collection": "pages"
+						}
+					]
+				},
+				{
+					"type": "pages",
+					"label": "Calendar",
+					"ref": "01KNYXBPZ0KA2KC8FG5AAPABXY",
+					"collection": "pages"
+				},
+				{
+					"type": "custom",
+					"label": "News",
+					"url": "/news"
+				},
+				{
+					"type": "pages",
+					"label": "Studio",
+					"ref": "01KNYXCVX7M1V8DYZ02497GNC5",
+					"collection": "pages",
+					"children": [
+						{
+							"type": "pages",
+							"label": "Apply",
+							"ref": "01KNZ5HAJ3XKFR1F35THSB95AA",
+							"collection": "pages"
+						},
+						{
+							"type": "pages",
+							"label": "FAQ",
+							"ref": "01KNYXCVX7M1V8DYZ02497GNC5",
+							"collection": "pages"
+						},
+						{
+							"type": "pages",
+							"label": "Policies",
+							"ref": "01KNZ5KDS880RRXERD424MYT2D",
+							"collection": "pages"
+						}
+					]
+				},
+				{
+					"type": "pages",
+					"label": "Resources",
+					"ref": "01KNYXDT4VF5G3THKY88V108TV",
+					"collection": "pages"
+				},
+				{
+					"type": "custom",
+					"label": "Fons",
+					"url": "https://fons.app",
+					"target": "_blank"
+				}
+			]
+		}
+	],
+	"widgetAreas": [
+		{
+			"name": "home_announcement",
+			"label": "Home - Announcement",
+			"description": "Appears on the Home page near the top to provide announcements.",
+			"widgets": []
+		},
+		{
+			"name": "footer",
+			"label": "Footer",
+			"description": "Appear at the bottom of the page below the social icons",
+			"widgets": []
+		}
+	]
+}

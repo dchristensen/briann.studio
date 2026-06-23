@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "pnpm: build",
+			"command": "pnpm",
+			"args": [
+				"run",
+				"build"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "silent"
+			}
+		}
+	]
+}

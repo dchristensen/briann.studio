@@ -1,0 +1,40 @@
+---
+import { getEmDashEntry, getSeoMeta } from "emdash";
+import { PortableText } from "emdash/ui";
+import DefaultLayout from "../layouts/Default.astro";
+
+const { entry: page, cacheHint } = await getEmDashEntry("pages", "calendar");
+
+Astro.cache.set(cacheHint);
+
+const seo = page
+  ? getSeoMeta(page, {
+      siteUrl: Astro.url.origin,
+      path: "/calendar",
+    })
+  : { title: undefined, description: undefined, canonical: undefined };
+---
+
+<DefaultLayout
+  title={seo.title}
+  description={seo.description}
+  canonical={seo.canonical}
+  content={page ? { collection: "pages", id: page.data.id, slug: "calendar" } : undefined}
+  >{
+    page && (
+      <article>
+        <h1 {...page.edit.title}>{page.data.title}</h1>
+
+        <div {...page.edit.content}>
+          <PortableText value={page.data.content} />
+        </div>
+      </article>
+    )
+  }
+  <div class="calendar-container">
+    <iframe
+      src={"https://calendar.google.com/calendar/embed?wkst=1&bgcolor=%23ffffff&ctz=America%2FDenver&src=aGVhdnlkLm5ldF8xYWdiZ3B2dmhhajk5M2psdG1sNGJxNG9yY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230B8043&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0"}
+      style={{ border: "solid 1px #777" }}
+      scrolling="no"></iframe>
+  </div>
+</DefaultLayout>
