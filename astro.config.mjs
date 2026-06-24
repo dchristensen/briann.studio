@@ -23,6 +23,9 @@ export default defineConfig({
 			}),
 		}),
 	],
+	cache: {
+		provider: memoryCache(),
+	},
 	devToolbar: { enabled: false },
 	server: {
 		host: true,
@@ -31,9 +34,4 @@ export default defineConfig({
 			interval: 500,
 		}
 	},
-	experimental: {
-		cache: {
-			provider: memoryCache(),
-		}
-	}
 });

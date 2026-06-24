@@ -47,4 +47,4 @@ See the [Cloudflare variant](../starter-cloudflare) for a version that deploys t
 ## See Also
 
 - [All templates](../)
-- [EmDash documentation](https://github.com/emdash-cms/emdash/tree/main/docs    )
+- [EmDash documentation](https://github.com/emdash-cms/emdash/tree/main/docs)

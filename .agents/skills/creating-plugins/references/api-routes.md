@@ -66,8 +66,8 @@ definePlugin({
 
 ## Route URLs
 
-| Plugin ID | Route Name      | URL                                        |
-| --------- | --------------- | ------------------------------------------ |
+| Plugin ID | Route Name      | URL                                      |
+| --------- | --------------- | ---------------------------------------- |
 | `forms`   | `status`        | `/_emdash/api/plugins/forms/status`      |
 | `forms`   | `submissions`   | `/_emdash/api/plugins/forms/submissions` |
 | `seo`     | `settings/save` | `/_emdash/api/plugins/seo/settings/save` |
@@ -215,11 +215,11 @@ routes: {
 
 ### External API Proxy
 
-Requires `network:fetch` capability and `allowedHosts`:
+Requires `network:request` capability and `allowedHosts`:
 
 ```typescript
 definePlugin({
-	capabilities: ["network:fetch"],
+	capabilities: ["network:request"],
 	allowedHosts: ["api.weather.example.com"],
 
 	routes: {

@@ -1,9 +1,10 @@
 ---
-import { getEmDashEntry, getEntryTerms, getSeoMeta } from "emdash";
+import { getEmDashEntry, getSeoMeta, decodeSlug, getSiteSettings } from "emdash";
 import { Image, PortableText, WidgetArea } from "emdash/ui";
 import Base from "../../layouts/Base.astro";
+import { resolveStarterSiteIdentity } from "../../utils/site-identity";
 
-const { slug } = Astro.params;
+const slug = decodeSlug(Astro.params.slug);
 
 if (!slug) {
 	return Astro.redirect("/404");
@@ -15,22 +16,24 @@ if (!post) {
 	return Astro.redirect("/404");
 }
 
-Astro.cache.set(cacheHint);
+if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
+const { siteTitle } = resolveStarterSiteIdentity(await getSiteSettings());
 
 // SEO meta from content fields
 const seo = getSeoMeta(post, {
-	siteTitle: "My Site",
+	siteTitle,
 	siteUrl: Astro.url.origin,
 	path: `/posts/${slug}`,
 });
 
-// Taxonomy terms for this post (use post.data.id, not post.id)
-const tags = await getEntryTerms("posts", post.data.id, "tag");
-const categories = await getEntryTerms("posts", post.data.id, "category");
+// Taxonomy terms are already hydrated onto the entry by getEmDashEntry.
+const tags = post.data.terms?.tag ?? [];
+const categories = post.data.terms?.category ?? [];
 ---
 
 <Base
 	title={seo.title}
+	pageTitle={seo.ogTitle}
 	description={seo.description}
 	canonical={seo.canonical}
 	image={seo.ogImage}
@@ -69,9 +72,7 @@ const categories = await getEntryTerms("posts", post.data.id, "category");
 			)
 		}
 
-		<div {...post.edit.content}>
-			<PortableText value={post.data.content} />
-		</div>
+		<PortableText value={post.data.content} />
 
 		{
 			tags.length > 0 && (
