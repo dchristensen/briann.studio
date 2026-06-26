@@ -1,14 +1,12 @@
-import node from "@astrojs/node";
+import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
-import { defineConfig, memoryCache } from "astro/config";
-import emdash, { local } from "emdash/astro";
-import { sqlite } from "emdash/db";
+import { d1, r2, kvCache } from "@emdash-cms/cloudflare";
+import { defineConfig } from "astro/config";
+import emdash from "emdash/astro";
 
 export default defineConfig({
 	output: "server",
-	adapter: node({
-		mode: "standalone",
-	}),
+	adapter: cloudflare(),
 	image: {
 		layout: "constrained",
 		responsiveStyles: true,
@@ -16,22 +14,10 @@ export default defineConfig({
 	integrations: [
 		react(),
 		emdash({
-			database: sqlite({ url: "file:./data/sqlite/data.db" }),
-			storage: local({
-				directory: "./data/uploads",
-				baseUrl: "/_emdash/api/media/file",
-			}),
+			database: d1({ binding: "DB", session: "auto" }),
+			storage: r2({ binding: "MEDIA" }),
+			objectCache: kvCache({ binding: "CACHE", keyPrefix: "em" }),
 		}),
 	],
-	cache: {
-		provider: memoryCache(),
-	},
 	devToolbar: { enabled: false },
-	server: {
-		host: true,
-		watch: {
-			usePolling: true,
-			interval: 500,
-		}
-	},
 });

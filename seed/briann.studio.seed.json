@@ -1,4 +1,3 @@
-ℹ Database: /workspaces/emdash-test/data/sqlite/data.db
 {
 	"$schema": "https://emdashcms.com/seed.schema.json",
 	"version": "1",
@@ -162,8 +161,10 @@
 			]
 		}
 	],
+	"defaultLocale": "en",
 	"taxonomies": [
 		{
+			"id": "tax:category",
 			"name": "category",
 			"label": "Categories",
 			"labelSingular": "Category",
@@ -173,16 +174,19 @@
 			],
 			"terms": [
 				{
+					"id": "term:category:general",
 					"slug": "general",
 					"label": "General"
 				},
 				{
+					"id": "term:category:updates",
 					"slug": "updates",
 					"label": "Updates"
 				}
 			]
 		},
 		{
+			"id": "tax:tag",
 			"name": "tag",
 			"label": "Tags",
 			"labelSingular": "Tag",
@@ -192,10 +196,12 @@
 			],
 			"terms": [
 				{
+					"id": "term:tag:example",
 					"slug": "example",
 					"label": "Example"
 				},
 				{
+					"id": "term:tag:starter",
 					"slug": "starter",
 					"label": "Starter"
 				}
@@ -204,6 +210,7 @@
 	],
 	"menus": [
 		{
+			"id": "menu:primary",
 			"name": "primary",
 			"label": "Primary Navigation",
 			"items": [
@@ -213,19 +220,19 @@
 					"url": "/"
 				},
 				{
-					"type": "pages",
+					"type": "page",
 					"label": "About",
 					"ref": "01KNXETBRN5H4DXMRTH6HDXEKF",
 					"collection": "pages",
 					"children": [
 						{
-							"type": "pages",
+							"type": "page",
 							"label": "Ms. BriAnn",
 							"ref": "01KNXETBRN5H4DXMRTH6HDXEKF",
 							"collection": "pages"
 						},
 						{
-							"type": "pages",
+							"type": "page",
 							"label": "Suzuki",
 							"ref": "01KNZ5DZEDAJVHHP2RYBFTJSXN",
 							"collection": "pages"
@@ -233,7 +240,7 @@
 					]
 				},
 				{
-					"type": "pages",
+					"type": "page",
 					"label": "Calendar",
 					"ref": "01KNYXBPZ0KA2KC8FG5AAPABXY",
 					"collection": "pages"
@@ -244,25 +251,25 @@
 					"url": "/news"
 				},
 				{
-					"type": "pages",
+					"type": "page",
 					"label": "Studio",
 					"ref": "01KNYXCVX7M1V8DYZ02497GNC5",
 					"collection": "pages",
 					"children": [
 						{
-							"type": "pages",
+							"type": "page",
 							"label": "Apply",
 							"ref": "01KNZ5HAJ3XKFR1F35THSB95AA",
 							"collection": "pages"
 						},
 						{
-							"type": "pages",
+							"type": "page",
 							"label": "FAQ",
 							"ref": "01KNYXCVX7M1V8DYZ02497GNC5",
 							"collection": "pages"
 						},
 						{
-							"type": "pages",
+							"type": "page",
 							"label": "Policies",
 							"ref": "01KNZ5KDS880RRXERD424MYT2D",
 							"collection": "pages"
@@ -270,7 +277,7 @@
 					]
 				},
 				{
-					"type": "pages",
+					"type": "page",
 					"label": "Resources",
 					"ref": "01KNYXDT4VF5G3THKY88V108TV",
 					"collection": "pages"
@@ -297,5 +304,1982 @@
 			"description": "Appear at the bottom of the page below the social icons",
 			"widgets": []
 		}
-	]
+	],
+	"content": {
+		"pages": [
+			{
+				"id": "pages:about",
+				"slug": "about",
+				"status": "published",
+				"data": {
+					"title": "About",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "This is the about page. Edit it in the admin panel or replace this template with your own design."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:studio-policies",
+				"slug": "studio-policies",
+				"status": "published",
+				"data": {
+					"title": "Studio Policies",
+					"content": [
+						{
+							"_type": "block",
+							"_key": "q6bi6708c",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "05adzrqd9",
+									"text": "Suzuki Philosophy",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "qm49cfb2b",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "aet5cu2p3",
+									"text": "Two mantras from Dr. Suzuki's philosophy that direct my piano instruction are “every child can [learn]” and “excellence with joy.” I believe that every child is capable of nurturing his/her talent to a standard of excellence and that joy is the motivation."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "9uycdsth3",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "bx0g0r8lp",
+									"text": "I hope to help students achieve excellence in"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "h15xzwt3s",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "aguupa23o",
+									"text": "tone production (including ear training and technique development)"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "hluv9dt6r",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "e67xsnskj",
+									"text": "music reading"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "f7nwnopwi",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ghpe5pic7",
+									"text": "overall musicianship"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "apgc6pqj1",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "g8lhr9iaz",
+									"text": "I believe that as students gain proficiency in these areas they will find satisfaction and a desire to continue playing all of their lives. I also believe that we as teachers and parents can foster this growth and enjoyment by helping them find joy in the journey. We should be creative in helping students play the piano. While practicing requires diligence, focus and hard work, we should always try to begin and end each session positively."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "3shgpgcf6",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "dyjahbo8y",
+									"text": "Payment and Fees",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "6i4a4it1n",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ov2wk4v6t",
+									"text": "Tuition is $100 for a 30 minute lesson ($150 a month for a 45 minute lesson and $200 a month for a 60 minute lesson). I recommend, upon completion of Suzuki Book One, that students should move to a 45 minute lesson. Once they get beyond Suzuki Books Two or Three, students benefit from an hour lesson. Additional siblings receive a $5 discount per month per child."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "wu4fikdjz",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "bo2zwx0tr",
+									"text": "Tuition is a monthly fee and covers not only your lesson time, but also the time I spend preparing for lessons and recitals, managing the business and maintaining the instruments and studio space. Typically, there will be 3 individual lessons and 1 group class each month but this is not guaranteed. We typically take a break in lessons during school holidays."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "p07n3gway",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "3hr2baur2",
+									"text": "I do expect students to continue lessons through the summer. As of summer 2025, summer lessons are only offered in a group lesson format. Group "
+								},
+								{
+									"_type": "span",
+									"_key": "ybfft3bdn",
+									"text": "lessons",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "a6d3ghc30",
+									"text": " are different from group "
+								},
+								{
+									"_type": "span",
+									"_key": "h5sdb3jmd",
+									"text": "classes",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "gh9sy7hm9",
+									"text": " which are only offered during the school year. During summer group lessons, students will be placed into groups of 3-5 students of similar ability. They will work together to progress through the repertoire, work on technique and learn sight reading and theory together. Summer group lessons will be 45-60 minutes in length and cost $100 per student per month. Students are guaranteed to receive 8 group lessons during the summer months."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "oxjk2zipn",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "sw5e4qzzk",
+									"text": "Tuition is due by the 10th of each month. Please include a $10 late fee with tuition paid after the 10th day of the month."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "85wp32zje",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "c9apjhys4",
+									"text": "Additionally, each student in my studio must be a member of the Suzuki Association of Utah. Beginning in September 2024, the SAU family membership fee is $40 for a family with one student and $5 for each additional sibling. Families will register themselves on the SAU website sometime during the month of September. Those who fail to do so, will not be able to maintain their place in my studio."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "85ywm7tgt",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "vvtx7tyez",
+									"text": "Attendance",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "mfurbutcd",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "sx4uylmdf",
+									"text": "Students are expected to come prepared to all individual lessons and group classes as well as any studio recitals. Students are considered prepared for a lesson when they have practiced and listened to the recordings at least 5 of the 7 days since the last lesson."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "mcsp1q7q4",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "hdipgflrd",
+									"text": "Studio recitals are typically held on Saturday afternoons in September, December, March and May. Families who fail to attend one or more recitals during any given year are in jeopardy of losing their spot in the studio. Additional regional recitals, festivals and competitions may be available for interested students. Recital preparation includes students being in best dress with pieces well-polished and memorized."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "7o9kcj68g",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "blky5mg2t",
+									"text": "Makeup Lessons",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "uer65x9nx",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "q0gb6kbjx",
+									"text": "I will always offer a makeup lesson for sickness and other emergencies. If you need to reschedule a lesson for any other reason, please contact me at least 48 hours in advance of the lesson in question for my available times. Additionally my calendar can be viewed on "
+								},
+								{
+									"_type": "span",
+									"_key": "4zto5svbo",
+									"text": "my website",
+									"marks": [
+										"e9v320rb8",
+										"underline"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "m1hh4vg6i",
+									"text": ". I reserve the right to decline a request to reschedule a lesson with less than 48 hours notice (except for sickness or emergency) or if a family makes rescheduling requests more than once a month."
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "e9v320rb8",
+									"href": "https://briann.studio/calendar",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "vzjmm4ud5",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ksui8ahys",
+									"text": "No makeup is offered for missing group lessons or group classes."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "s25cd1wzg",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "o0r5gwmdu",
+									"text": "Terminating Lessons",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "h17dcf9eb",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "7z0vcb8kv",
+									"text": "If you would like to stop taking lessons, please give me 4 weeks notice. I would like to have time to say goodbye and to find another student to fill the slot in the studio."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ndfcsj69u",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "cprbhmc01",
+									"text": "Equipment and Supplies",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "gwarv6p1y",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "i69o8b616",
+									"text": "One of Dr. Suzuki's philosophies was that beginning students should have the best teachers and the best equipment available for the most effective talent training. Each family should have the best quality acoustic piano that they can afford. They should also provide maintenance and tuning regularly (once or twice a year is recommended)."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "byhdyg26h",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ajcd9ov3m",
+									"text": "Additionally, proper seating is essential to establishing correct technique for tone development, injury prevention and playing ease. Each family is responsible for an adjustable bench/chair and footstool."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "n4fye1mwa",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "u19toqgts",
+									"text": "Students are responsible for their own copies of Suzuki Piano School New International Edition. They should own the printed music as well as legal and easily accessible copies of the recordings for each level as they progress. Also, sight reading material and other music is the responsibility of the student. I am always happy to purchase music for you if you include reimbursement with your monthly tuition."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "4nb8xxpek",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "vuypqvhpa",
+									"text": "Listening",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "8u1vm9ess",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "t8i5t4a56",
+									"text": "The Suzuki method is best known for “the mother tongue method” of teaching. Dr. Suzuki was amazed when he realized that young Japanese children can learn Japanese, one of the hardest languages in the world, just by listening to and imitating their parents. He applied this observation to his talent development program by encouraging students to listen to great artists and their music."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "025w9y99t",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "olcz7fo9q",
+									"text": "Students in my studio are required to listen one hour each day as part of their daily practice. Most of the time, their listening should focus on the pieces from the book they are currently studying. Students should find a balance between listening to the book in its entirety and more focused listening before and after practice sessions. It is also helpful for students to listen to the pieces from the next book they will study once they are half-way through learning the current book."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "k4cippge6",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "v675u9qgl",
+									"text": "Since providing a musical environment is important in talent development, I also recommend listening to other classical music and attending concerts of quality performances as often as possible."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "6h7vh8nkp",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "dedkxzb0f",
+									"text": "Practicing",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "e1sdm21wg",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "09dym3ma2",
+									"text": "Daily practice is expected for each student. A good rule of thumb is that students should practice at least as many minutes a day as their lesson (i.e. 30 minute lesson = 30 minutes of practice a day). Please understand that progress, enjoyment and motivation are all directly linked to diligent practicing. Practicing may be broken up into smaller sessions (especially for young beginners)."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "xjllgy63c",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "rbeq1vhup",
+									"text": "In order to be prepared for their lessons, students should practice and listen at least 5 days a week and should include some careful, focused, slow practice on small sections. I recommend finding time to at least play something everyday. On occasion when you can't get to a piano (on vacation for example), just doing the listening can count for 100% of the practice. An especially helpful way to practice by listening, is by following allow in the music while listening to the recording."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "uwduy1u5c",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "i4p4iwz3d",
+									"text": "The ultimate goal is to make practicing and listening a normal part of every day. Find a way to make it become a part of your routine. Ideally, students eventually gravitate to playing something everyday out of enjoyment. For this reason, anytime students (especially young beginners) choose to go to the piano on their own, parents should notice, compliment, assist and encourage their playing."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "jpbyjr1vu",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "x1c7s1f7a",
+									"text": "Parent, Teacher, Student Triangle",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "qf0klb7gy",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "s2tl53z6i",
+									"text": "Suzuki method relies heavily on the assumption that the teacher, student and parent work together to achieve excellence."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "jlogngwad",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ks7g18zhu",
+									"text": "The teacher is responsible for teaching"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "3ymns8j0p",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "1ex40tc9o",
+									"text": "technique"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "n0p4jvxbz",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "kxkv15sdt",
+									"text": "tone development"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "fbgn9hgi8",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "6szvqrcyt",
+									"text": "timing"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "9b9v57sy3",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "wy0cgns9u",
+									"text": "musical sensitivity"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "kuv736f65",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "gr1451jrv",
+									"text": "The teacher also commits to continuing to develop her teaching and playing abilities by attending professional development trainings, taking lessons and constantly researching her own playing."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "79697f3tg",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "06z2dux0f",
+									"text": "The role of the parent is vital. They are responsible for"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ykvn56lld",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "bjqwl1pih",
+									"text": "correct positioning at the piano"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "y5r576767",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ry38scf3a",
+									"text": "correct fingering"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "57wbcccit",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "nm7xvzoh3",
+									"text": "inviting the student to practice and listen each day"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "97lydqbw2",
+							"style": "normal",
+							"listItem": "number",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "3ubv4fyf9",
+									"text": "attending each lesson"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ayf6h6p8m",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "8dm6z0c9w",
+									"text": "As they are such an essential part of ensuring their child's success, each student must have at least one parent participate in a four week parent education training. These classes take the place of the child's first 4 weeks of lessons. Additionally, each quarter parents will be expected to participate in an online parent group class for ongoing training and moral support. They may attend a group class that I organize for our studio or the Parent Meet-Up webinars sponsored by the SAU. (Parents who are transferring from another Suzuki studio may be excused from the four week parent training on a case by case basis.)"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "oeune2kt8",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "80ew0g754",
+									"text": "Students are responsible for learning the notes, fingerings and rhythms by first listening and later by listening AND reading the music. Please don't interfere with your child's exploration as they learn to learn by ear! You may ask questions and encourage but do not teach them the notes by “rote” or “watch and copy” or any other method unless I specifically give you an assignment to do so. Allowing the students this independence in learning is incredibly important in maintaining their curiosity and motivation."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "bh8kidqxl",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "5ga5jou4u",
+									"text": "I love the Suzuki method because it facilitates one-on-one time between the parent and child as the parent attends lessons and helps with daily practicing. I hope you take advantage of this quality time together! I look forward to being a part of your child's musical experience."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:studio-apply",
+				"slug": "studio-apply",
+				"status": "published",
+				"data": {
+					"title": "Apply to Join the Studio",
+					"content": [
+						{
+							"_type": "block",
+							"_key": "719ei3d93",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ug4qozqy5",
+									"text": "Scroll down to sign in and view the application form or you can access the form "
+								},
+								{
+									"_type": "span",
+									"_key": "hrqf1y717",
+									"text": "directly",
+									"marks": [
+										"0wkw5dgbo"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "qf9j8cri9",
+									"text": "."
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "0wkw5dgbo",
+									"href": "https://docs.google.com/forms/d/e/1FAIpQLSc9NJUih6xKb-zFHZdp8wlwZnGnYTvRMFiXbILdHBkMuKgy6Q/viewform?usp=sf_link",
+									"blank": true
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:about-suzuki",
+				"slug": "about-suzuki",
+				"status": "published",
+				"data": {
+					"title": "Suzuki Method",
+					"content": [
+						{
+							"_type": "block",
+							"_key": "3jhrhzxnt",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "fd2f06dtv",
+									"text": "Musical Roots",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "wwqox4dgw",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "9f5vuzvlw",
+									"text": "My introduction to the Suzuki method came by chance. When I was 5 years old, I was at the home of a friend when I climbed up on the piano and plunked out a primary song that I had learned to sing at church. My friend's mom, a Suzuki method piano teacher, recognized an opportunity and asked my mom for permission to begin teaching me. I remember very little about those early lessons with Ms. Julie. I remember falling asleep every night listening to the recording of the songs playing on my tape player. I remember her sitting next to me on the bench and affectionately squeezing my little hands in her big ones. I remember singing words like \"Mississippi Hot Dog\" and \"Hamburger, Hamburger\" to learn the rhythm of the Twinkles. I remember that she put little cards with pictures in front of me as prompts for the songs she wanted me to play during the lesson. I remember learning \"sticky honey fingers\" to make the legato sound on The Honeybee. I vividly recall being terrified at my first recital. I was so scared that I refused to play. After my teacher offered to sit next to me, I felt safe enough to attempt it. Safety, warmth, love; those are the feelings I remember more than anything when I think back on my piano beginnings."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "df2c25s7q",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "xgkhqco23",
+									"text": "I have thought a lot about Ms. Julie over the years and wondered what she saw in me. What was so special about me that made her approach my mom and offer to give us lessons? I have come to learn that likely the most \"special\" thing about me was that I was a child."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "8ni8qlkqs",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "cowmfod3w",
+									"text": ""
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "dpj1tz7jw",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "qharler6k",
+									"text": "I am mentally preparing myself for the five-year-old mind. I want to come down to their physical limitations and up to their sense of wonder and awe.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "6yncwqrp5",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "5lv5m7y3k",
+									"text": "I play with children so that I can learn from them.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "u9f260rm6",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "6zfgd54fw",
+									"text": "There was no exceptional ability or skill that Ms. Julie could see in me that wasn't in other children. I wasn't \"destined\" to be a musician. The only musical advantage, if any, that I had over other children was that I had been blessed with a musical family. In fact, at our house the radio was literally playing non-stop. At the time, my father, a lover of classic rock, was the manager of a local radio station. We had to have the radio on all the time to make sure we were always \"on air.\" Occassionally late at night while my dad was at the station, if I couldn't (or wouldn't) sleep, he'd have The Beatles sing me \"Good Night\" over the air while my mom rocked me to sleep. My mother inherited a love of classical music from her parents. She has played the piano all throughout her life. After aquiring our second-hand antique upright grand, she painstakingly stripped the layers of paint off and refinished it while she was pregnant with me. On Sundays we would listen to hymns and the Tabernacle Choir. At Christmas time we listened to Julie Andrews, Andy Williams and Handel's Messiah. My early musical environment was rich and is what led to my experimentation at the piano."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "e84yh4mso",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "y6up84y1o",
+									"text": ""
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ktzih3yiw",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "zaan4e4o7",
+									"text": "The Suzuki Method",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "grvaseshd",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "l5hsw70rq",
+									"text": "This is exactly the process that Dr. Suzuki \"discovered\"--"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "4uall42nk",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ikv7re0kx",
+									"text": "Any child can be developed, it depends on how you do it.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "b5mw48onl",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "egmhwmrmb",
+									"text": "Every child grows; everything depends on the teacher.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "b2ohl1gb8",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "971rczdw3",
+									"text": "Who is the teacher Dr. Suzuki was talking about? Certainly he meant formal teachers but he was also referring to the child's parents, peers, and surroundings. You inevitably learn to do, say and be exactly what you are surrounded with throughout your life."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "8m06vxgx6",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "rbwbbiq60",
+									"text": "As I consider my musical upbringing, I am grateful for a family who made music a lifestyle and for teachers who nurtured my abilities within that musical environment. This is the ideal learning process. This method was not "
+								},
+								{
+									"_type": "span",
+									"_key": "e7vm10h2g",
+									"text": "created",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "cmw6rvt00",
+									"text": " by Dr. Suzuki. He simply observed the human experience and taught others what he noticed. The beauty is knowing that WE have control over our environment. We can shape who we want to become by changing the experiences and surroundings we give ourselves and our children."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "lgdi4rvxd",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "j2mwn2yr3",
+									"text": "Perhaps it is Music that will save the world",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "rn9h8wcm3",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "krrdcpq8n",
+									"text": "Wrong education and upbringing produces ugly personalities, whereas a fine upbringing and good education will bring forth superior sense and feeling, as well as nobility and purity of mind.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "9q0m2zg2l",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "rtkwj38rr",
+									"text": "If a musician wants to become a finer artist, he must first become a finer person.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "pqsik3iwl",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "5913zkxel",
+									"text": "This is why I do what I do and this is why I choose Suzuki method. Dr. Suzuki never set out to create a world full of professional musicians. He set out to create beautiful hearts through music."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "5w9hxrpn5",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "f8bn5pyvd",
+									"text": "First character, then ability.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "vh6sdvfqo",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ndkimkd6o",
+									"text": "It is in our power to educate all the children of the world to become a little better as people, a little happier.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "3ovuu2oab",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "y1tq4oo1i",
+									"text": "Perhaps it really is music that will save the world. I hope it will at least change the world of each student I have the privilege to teach."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:resources",
+				"slug": "resources",
+				"status": "published",
+				"data": {
+					"title": "Resources",
+					"content": [
+						{
+							"_type": "block",
+							"_key": "tsxjhlqtl",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "l2vwoozu3",
+									"text": "Suzuki",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "8o2j8sz9c",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "yrwk29vi2",
+									"text": "Suzuki Association of Utah",
+									"marks": [
+										"dy5iqlnne",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "dy5iqlnne",
+									"href": "https://suzukimusicutah.org/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "sjfwd8qqv",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "it7kqlvb1",
+									"text": "Suzuki Association of the Americas",
+									"marks": [
+										"3fwu2g9fn",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "3fwu2g9fn",
+									"href": "https://suzukiassociation.org/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "vcruee7e0",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "t63hnlii8",
+									"text": "The Practice Shoppe",
+									"marks": [
+										"3wci04xuz",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "3wci04xuz",
+									"href": "https://www.thepracticeshoppe.com/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "oiutr7xh2",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "h4u72olrs",
+									"text": "My YouTube Channel",
+									"marks": [
+										"h9imr5xi9"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "h9imr5xi9",
+									"href": "https://youtube.com/@briannssuzukipianostudio9374",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "j73lrnrqi",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "0o0nwlkwz",
+									"text": "SAU YouTube Channel",
+									"marks": [
+										"oovrel6sa",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "oovrel6sa",
+									"href": "https://youtube.com/@suzukimusicutah?si=gcpAfVMk1HVpgc8y",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "9md7bujjl",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "09maynvcp",
+									"text": "\n"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "pe345qf2h",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "wohez9h3l",
+									"text": "General Piano",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "3389lx2e4",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ppc8bk07w",
+									"text": "NinGenius Music App",
+									"marks": [
+										"1p3hnnn9f",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "1p3hnnn9f",
+									"href": "https://www.myninjamusic.com/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "isu07u1gh",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "qdld256xf",
+									"text": "Note Rush App",
+									"marks": [
+										"vtk675k5t",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "vtk675k5t",
+									"href": "https://www.noterushapp.com/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "bgpzwpgar",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "kkhu15g23",
+									"text": "Practice Space App",
+									"marks": [
+										"ycu52t7qc",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "ycu52t7qc",
+									"href": "https://www.practicespaceapp.com/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "gsenbou1j",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "wo02rsebr",
+									"text": "Musicnotes App",
+									"marks": [
+										"cwpk5l4tl",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "cwpk5l4tl",
+									"href": "https://www.musicnotes.com/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "dj40j57p2",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "0gptbnidy",
+									"text": "Musicards Flashcards",
+									"marks": [
+										"2k2vwla17",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "2k2vwla17",
+									"href": "http://musicards.net/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "nex9f88t7",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "zg9o9lwea",
+									"text": "Name That Note – Online Music Flashcards",
+									"marks": [
+										"ujqithy0z",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "ujqithy0z",
+									"href": "https://www.richmanmusicschool.com/products/name-that-note",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "o10diakia",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"_key": "0d8n7vvbp",
+									"text": "Sight Reading Factory",
+									"marks": [
+										"ty6pvewof",
+										"underline"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "ty6pvewof",
+									"href": "https://www.sightreadingfactory.com/app",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "s2yyvkukp",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "vzsccgiut",
+									"text": ""
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:studio-faq",
+				"slug": "studio-faq",
+				"status": "published",
+				"data": {
+					"title": "Frequently Asked Questions",
+					"content": [
+						{
+							"_type": "block",
+							"_key": "rqx4xk1yc",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "26pazript",
+									"text": "What is the Suzuki Method and how is it different from traditional piano lessons?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "kuqxypf1o",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "gvkencqc2",
+									"text": "The Suzuki Method is an approach to learning music that follows the pattern of language acquisition. Students begin by listening to outstanding musical performances of the pieces they will study. They learn to imitate the music by ear while developing the technique to play fluently and beautifully. After these basic skills are mastered, the students’ ability to read music is added to the study."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "sitlaguob",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "joead0a6d",
+									"text": "Besides introducing music reading later, Suzuki Method is different from traditional piano lessons in several ways. Students begin to study the most technical skills right from the start. The emphasis of Suzuki Piano lessons is not on “passing off” songs, but mastering skills and growing the student’s playing repertoire. All songs previously learned, continue to be played, polished and mastered while new songs are added to the list."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "73pxat3id",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "iuupcmukk",
+									"text": "Also, parents have a huge role in Suzuki Piano lessons. They attend every lesson, take notes and take responsibility for the student’s listening and practice time at home. They practice side by side with their child to ensure that the assignments are being completed correctly and skills are practiced carefully."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "760flra6w",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "79eq10nb1",
+									"text": "The Suzuki Method is based on the philosophy that “Every Child Can” learn. There is no such thing as a child prodigy-- but all children can learn to play well when given excellent teachers, the best instruments and a loving and rich musical environment."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "qe2o8zrpx",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "fzroj0vit",
+									"text": "Do Suzuki Piano students ever learn to read music?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "arlrlatny",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "dk8phw21b",
+									"text": "Unfortunately, there is a misperception that Suzuki Piano students do not learn to sight read. I have even heard Suzuki teachers of other instruments perpetuate that incorrect assumption. We follow the pattern of language acquisition-- imitate first, read later once the vocabulary and fluency are in place. It is true that Suzuki Piano teachers develop the ears first but note reading is a vital part of complete musical language fluency."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "e2pt0mftf",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "41ya2ow5o",
+									"text": "On the contrary, I have known former Suzuki students who never learned to read music so I know there is evidence that Suzuki piano students don't learn to read, but the Suzuki method itself is not to blame. The fault lies with the student who didn't learn or the teacher who didn't teach."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "bbu1vhewc",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "f7rj7dbsp",
+									"text": "Personally, I introduce pre reading exercises from the very first lesson and expect students to be working out of a reading method book by the time they reach Suzuki Book 2."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "jzwww5d5a",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "8vpaf6dpa",
+									"text": "What is expected of a Suzuki Piano student?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "k96pl4f24",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "k6in0rk8a",
+									"text": "Suzuki students are expected to learn the songs in the books by listening to them consistently and frequently. They typically attend 3 individual lessons and 1 group lesson per month and perform in at least 4 recitals a year. They are held to a standard of excellence at all ability levels. They are expected to become good citizens as they practice respect for their teacher and parents, dedication, and sensitivity."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ifhada8un",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "pv4heoe2l",
+									"text": "What is expected of a parent of a Suzuki Piano student?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "d63wccum0",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "i951t99op",
+									"text": "Parents of Suzuki students are expected to invite their child to practice everyday at a consistent time. They are primarily responsible for making sure that their child is listening to the recordings and providing a musically rich environment. They are expected to practice with their child and ensure that they are practicing the assigned skills carefully and learning the fingering correctly. The parents should attend every lesson and take notes on assignments and skills that will be focused on during the week."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "5h5ph7rby",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "kmi4w90ib",
+									"text": "What is expected of a Suzuki Piano teacher?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "jnjarnwi7",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "zd3bp1li6",
+									"text": "The Suzuki piano teacher is expected to teach a student how to play with a beautiful tone. They work closely with the parent and student to find solutions to difficulties they may encounter. They provide a good example to the students; both as a master of the instrument and an individual with a beautiful heart. Suzuki teachers are dedicated to a lifetime of learning and growth. Their own training is never “complete.”"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "w5xl5egdj",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "lahd701s6",
+									"text": "What is the Mother Tongue method?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "4ufidqy5q",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "h1stc57jw",
+									"text": "This is another name for the method that Dr. Suzuki identified as the best way for children to learn music. He marveled that Japanese children learned Japanese, one of the most complicated languages on earth, by listening and imitating their parents. Music education follows the natural progression of language acquisition."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "cccr75ppm",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "3cpdwgwwz",
+									"text": "Who was Dr. Suzuki?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "g2p4w5enm",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "rdmqtn5no",
+									"text": "Dr. Shinichi Suzuki was the founder of the Talent Education and Research Institute in Matsumoto, Japan. Here is a short bio about him."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "y6scgkfzr",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "nchrhdjb5",
+									"text": "https://suzukimusicutah.org/dr-shinichi-suzuki/",
+									"marks": [
+										"jpa6rhz6q"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "jpa6rhz6q",
+									"href": "https://suzukimusicutah.org/dr-shinichi-suzuki/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "rlnbt3kr7",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "sqwx9itib",
+									"text": "Where can I find Suzuki teachers who live close to me?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "hhle0fbi3",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "z2wc7j3o7",
+									"text": "For those living in the Americas: "
+								},
+								{
+									"_type": "span",
+									"_key": "pzcfzi1xe",
+									"text": "https://suzukiassociation.org/find-a-suzuki-teacher/",
+									"marks": [
+										"u9mfgjhrr"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "u9mfgjhrr",
+									"href": "https://suzukiassociation.org/find-a-suzuki-teacher/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "sitsbbjo5",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "ofrh5smz2",
+									"text": "For those living in Utah: "
+								},
+								{
+									"_type": "span",
+									"_key": "f1u2slesi",
+									"text": "https://suzukimusicutah.org/teacher-directory/",
+									"marks": [
+										"zi9dplnpq"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "zi9dplnpq",
+									"href": "https://suzukimusicutah.org/teacher-directory/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "p2mow1ap4",
+							"style": "h3",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "wzymdpyk5",
+									"text": "What is the Suzuki Association of the Americas (SAA) and Suzuki Association of Utah (SAU) and how do I benefit from being a member of these organizations?",
+									"marks": [
+										"strong"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "n4xmcqw0b",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "hwvh9m1w5",
+									"text": "The Suzuki Association of the Americas is an organization of Suzuki Teachers across North and South America who are committed to the teaching of children and Dr. Suzuki’s philosophy of talent development. SAA provides teacher training programs and many resources for teachers and parents. Learn more here. "
+								},
+								{
+									"_type": "span",
+									"_key": "alpb907oy",
+									"text": "https://suzukiassociation.org/about/",
+									"marks": [
+										"ba1fmemkm"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "ba1fmemkm",
+									"href": "https://suzukiassociation.org/about/",
+									"blank": true
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ifkav4if7",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "7zvnrz6rj",
+									"text": "The Suzuki Association of Utah is a chapter of SAA in Utah. They provide a community for parents, teachers and students of the Suzuki method. They provide opportunities for interaction for both motivation and talent development. Every 5 years they host Celebration of Suzuki where piano students traditionally participate in a 5 piano concert. There are various state-wide and regional activities and recitals as well. Learn more about SAU benefits here. "
+								},
+								{
+									"_type": "span",
+									"_key": "exva816ul",
+									"text": "https://suzukimusicutah.org/member-benefits/",
+									"marks": [
+										"lk4gohgvi"
+									]
+								}
+							],
+							"markDefs": [
+								{
+									"_type": "link",
+									"_key": "lk4gohgvi",
+									"href": "https://suzukimusicutah.org/member-benefits/",
+									"blank": true
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:calendar",
+				"slug": "calendar",
+				"status": "published",
+				"data": {
+					"title": "Calendar",
+					"content": [
+						{
+							"_type": "block",
+							"_key": "z5joakobh",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "56jrnn6at",
+									"text": ""
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "pages:about-me",
+				"slug": "about-me",
+				"status": "published",
+				"data": {
+					"title": "About Ms. BriAnn",
+					"content": [
+						{
+							"_type": "image",
+							"_key": "qoa4kp0xi",
+							"asset": {
+								"_ref": "01KNZ5T0YNFR4957P85CDQN4WZ",
+								"url": "/_emdash/api/media/file/01KNZ5T0Y68YWQCP59H0HBTG1G.jpg"
+							},
+							"alt": "Ms. BriAnn's Family",
+							"width": 4480,
+							"height": 2987,
+							"displayWidth": 650,
+							"displayHeight": 433
+						},
+						{
+							"_type": "block",
+							"_key": "xhucwuh60",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "5l0rotnca",
+									"text": "Hello! I’d love to get to know you! Here’s a little about me. I am a native of Utah. I graduated as a Red Devil from Springville High School and later with a degree in Music Education from Southern Utah University. After college and missionary service for The Church of Jesus Christ of Latter-day Saints, I taught choir and musical theater at Centennial Middle School in Provo."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "q7jbix9zm",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "tapxithmr",
+									"text": "In 2008 I married my husband, Derek and we quickly became parents to 4 active boys. In 2015, right after my fourth son was born, I started teaching the Suzuki Piano Method from home. Since then I have taught many students ages 2-50 and continually strive to improve my teaching skills. I am registered at all 7 levels of the Suzuki Piano repertoire with the Suzuki Association of the Americas receiving valuable instruction from Teacher Trainer and Suzuki Piano Pioneer Cleo Brimhall. I have traveled to other places for Suzuki Training including to Colorado for Suzuki Pedagogy in Action class and a week in Sacramento, California to learn from two teachers from the Talent Education Research Institute in Matsumoto, Japan. I have also completed the Suzuki Practicum and Teaching Strategies courses. I am currently working towards becoming a Piano Teacher Trainer in the SAA and hope to be able to complete that in the next few years. I am an active member of the The Suzuki Association of Utah and currently serve as the President of the board. I also am an active member of The Suzuki Association of the Americas, Utah Music Teachers Association and the National Federation of Music Clubs."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "8ysnkutzx",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "b6ubo98up",
+									"text": "Besides music, I also love diet Dr. Pepper, reading, eating out, playing board games and traveling with my family. Next to spending time with my family, my greatest passion is teaching. I love seeing children progress and interacting one-on-one with them and their parents. I treasure all of the relationships I have made through Suzuki Piano. I subscribe to the whole philosophy of Dr. Shinichi Suzuki, but especially love this sentiment:"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "v45qnizm3",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "nppo93zea",
+									"text": "Teaching music is not my main purpose. I want to make good citizens. If children hear fine music from the day of their birth and learn to play it, they develop sensitivity, discipline and endurance. They get a beautiful heart.",
+									"marks": [
+										"em"
+									]
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "71pistxth",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"_key": "9jvunidv3",
+									"text": "Above all else, music education is education of character."
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
 }

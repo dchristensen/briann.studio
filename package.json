@@ -8,15 +8,17 @@
     "seed": "seed/seed.json"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro --config astro.local.config.mjs dev",
     "build": "astro build",
     "preview": "astro preview",
     "start": "node ./dist/server/entry.mjs",
     "typecheck": "astro check"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.0.0",
     "@astrojs/node": "^11.0.0",
     "@astrojs/react": "^6.0.0",
+    "@emdash-cms/cloudflare": "^0.22.0",
     "astro": "^7.0.0",
     "better-sqlite3": "^12.8.0",
     "emdash": "^0.22.0",
