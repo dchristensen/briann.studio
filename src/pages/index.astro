@@ -1,6 +1,6 @@
 ---
-import { getEmDashCollection, getSiteSettings, getWidgetArea } from "emdash";
-import { Image, PortableText } from "emdash/ui";
+import { getSiteSettings, getWidgetArea } from "emdash";
+import { PortableText } from "emdash/ui";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Music from "../components/icons/Music.astro";
@@ -15,45 +15,45 @@ const announcement = await getWidgetArea("home_announcement");
 ---
 
 <Base title={siteTitle} description={siteTagline}>
-	<Header>
-		<div id="banner">
-			<div class="container">
-				<section>
-					<header class="major">
-						<h2>{siteTitle}</h2>
-						<span class="byline">
-							<em>
-								&quot;It is in our power to educate all the children of the world to become a little
-								better as people, a little happier.&quot; -Dr. Suzuki
-							</em>
-						</span>
-					</header>
-				</section>
-			</div>
-		</div>
-	</Header>
-	{
-		announcement && announcement.widgets.length > 0 && (
-			<aside>
-				{announcement.widgets.map((widget) => (
-					<div class="events-alert">
-						<div class="icon">
-							<Music />
-						</div>
-						<div class="events-message">
-							<PortableText value={widget.content} />
-						</div>
-						<div class="icon">
-							<Music />
-						</div>
-					</div>
-				))}
-			</aside>
-		)
-	}
-	<StudentImageGallery />
-	<Main>
-		<RecentEvents />
-	</Main>
-	<Footer />
+  <Header>
+    <div id="banner">
+      <div class="container">
+        <section>
+          <header class="major">
+            <h2>{siteTitle}</h2>
+            <span class="byline">
+              <em>
+                &quot;It is in our power to educate all the children of the world to become a little better as people, a
+                little happier.&quot; -Dr. Suzuki
+              </em>
+            </span>
+          </header>
+        </section>
+      </div>
+    </div>
+  </Header>
+  {
+    announcement && announcement.widgets.length > 0 && (
+      <aside>
+        {announcement.widgets.map((widget) => (
+          <div class="events-alert">
+            <div class="icon">
+              <Music />
+            </div>
+            <div class="events-message">
+              <PortableText value={widget.content} />
+            </div>
+            <div class="icon">
+              <Music />
+            </div>
+          </div>
+        ))}
+      </aside>
+    )
+  }
+  <StudentImageGallery />
+  <Main>
+    <RecentEvents />
+  </Main>
+  <Footer />
 </Base>
