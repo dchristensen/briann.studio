@@ -3,6 +3,7 @@ import { getEmDashCollection } from "emdash";
 import { Image } from "emdash/ui";
 import YouTubeVideo from "../components/YouTubeVideo.astro";
 import DefaultLayout from "../layouts/Default.astro";
+import { formatDate } from "../utils/date";
 import type { News } from "../../emdash-env";
 
 const { entries: news, cacheHint } = await getEmDashCollection("news", {
@@ -32,7 +33,7 @@ Astro.cache.set(cacheHint);
               <div class="news-headline" title={n.title}>
                 {n.title}
               </div>
-              <div class="news-date">{n.date}</div>
+              <div class="news-date">{formatDate(n.date)}</div>
             </div>
           </div>
         ))

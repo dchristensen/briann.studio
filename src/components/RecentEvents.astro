@@ -1,5 +1,6 @@
 ---
 import { getEmDashCollection } from "emdash";
+import { formatDate } from "../utils/date";
 import YouTubeVideo from "./YouTubeVideo.astro";
 
 const { entries: events, cacheHint } = await getEmDashCollection("events", {
@@ -28,7 +29,7 @@ Astro.cache.set(cacheHint);
             )}
             <div>
               <h3>{event.title}</h3>
-              {event.date}
+              <p>{formatDate(event.date)}</p>
             </div>
           </div>
         ))
