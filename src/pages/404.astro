@@ -1,9 +1,18 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Main from "../components/Main.astro";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base title="Not Found">
-	<h1>Page not found</h1>
-	<p>The page you're looking for doesn't exist.</p>
-	<a href="/">Go home</a>
+  <Header />
+  <Main>
+    <article>
+      <h1>Page not found</h1>
+      <p>The page you're looking for doesn't exist.</p>
+      <a href="/">Go home</a>
+    </article>
+  </Main>
+  <Footer />
 </Base>
