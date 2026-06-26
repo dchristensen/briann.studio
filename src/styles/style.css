@@ -526,7 +526,7 @@ ul.actions.vertical li:first-child {
   padding: 0;
 }
 
-ul.contact li {
+ul.contact > li {
   padding: 0.6em 0;
   border-top: 1px solid;
   border-color: rgba(192, 192, 192, 0.15);
