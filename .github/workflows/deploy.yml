@@ -16,10 +16,13 @@ jobs:
         uses: pnpm/action-setup@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: "pnpm"
+
+      - name: Set pnpm store path
+        run: pnpm config set store-dir ~/.pnpm-store
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
