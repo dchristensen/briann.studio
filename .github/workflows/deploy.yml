@@ -21,9 +21,6 @@ jobs:
           node-version: 24
           cache: "pnpm"
 
-      - name: Set pnpm store path
-        run: pnpm config set store-dir ~/.pnpm-store
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 

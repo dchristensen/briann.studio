@@ -14,5 +14,3 @@ minimumReleaseAgeExclude:
   - emdash
   - "@emdash-cms/*"
 blockExoticSubdeps: true
-
-storeDir: /pnpm

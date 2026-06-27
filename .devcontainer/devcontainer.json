@@ -24,7 +24,8 @@
   },
   "remoteEnv": {
     "CHOKIDAR_USEPOLLING": "true",
-    "CHOKIDAR_INTERVAL": "500"
+    "CHOKIDAR_INTERVAL": "500",
+    "PNPM_STORE_PATH": "/pnpm"
   },
   "mounts": [
     "type=volume,dst=/pnpm",
