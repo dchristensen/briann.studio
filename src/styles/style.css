@@ -780,6 +780,11 @@ input[type="button"].small,
   padding: 4em 0 0 0;
 }
 
+#banner .major {
+  max-width: 75vh;
+  margin: 0 auto;
+}
+
 #banner .major h2 {
   font-size: 3.5em;
 }
@@ -789,10 +794,21 @@ input[type="button"].small,
   margin: 0em 2em;
   line-height: 1.6em;
   font-size: 1.5em;
+  color: black;
+  text-shadow:
+    -1px -1px 3px rgba(255, 255, 255, 0.75),
+    1px -1px 3px rgba(255, 255, 255, 0.75),
+    -1px 1px 3px rgba(255, 255, 255, 0.75),
+    1px 1px 3px rgba(255, 255, 255, 0.75);
 }
 
 #banner a {
   color: inherit;
+}
+
+#banner .logo {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
 }
 
 /* Main */
