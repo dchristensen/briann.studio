@@ -3,19 +3,18 @@ import { getEmDashCollection } from "emdash";
 import ImageGallery, { type GalleryItem } from "react-image-gallery";
 import "react-image-gallery/styles/image-gallery.css";
 
-const { entries: galleryItems, cacheHint } = await getEmDashCollection("gallery_images", {
-  orderBy: { published_at: "asc" },
-});
-// TODO: shuffle?
+const { entries: galleryItems, cacheHint } = await getEmDashCollection("gallery_images");
 
-const images = galleryItems.map(
-  (item): GalleryItem => ({
-    original: item.data.image.src ?? `/_emdash/api/media/file/${item.data.image.meta.storageKey}`,
-    originalWidth: String(item.data.image.width ?? 0),
-    originalHeight: String(item.data.image.height ?? 0),
-    originalAlt: item.data.image.alt,
-  }),
-);
+const images = galleryItems
+  .sort(() => Math.random() - 0.5) // Shuffle the images
+  .map(
+    (item): GalleryItem => ({
+      original: item.data.image.src ?? `/_emdash/api/media/file/${item.data.image.meta.storageKey}`,
+      originalWidth: String(item.data.image.width ?? 0),
+      originalHeight: String(item.data.image.height ?? 0),
+      originalAlt: item.data.image.alt,
+    }),
+  );
 
 Astro.cache.set(cacheHint);
 ---

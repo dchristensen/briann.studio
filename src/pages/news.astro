@@ -7,7 +7,6 @@ import { formatDate } from "../utils/date";
 import type { News } from "../../emdash-env";
 
 const { entries: news, cacheHint } = await getEmDashCollection("news", {
-  orderBy: { date: "desc" },
   limit: 10,
 });
 
@@ -23,6 +22,7 @@ Astro.cache.set(cacheHint);
     {
       news
         .map((n) => n.data)
+        .sort((a, b) => b.date.localeCompare(a.date))
         .map((n) => (
           <div class="news-item">
             <div class="news-media">

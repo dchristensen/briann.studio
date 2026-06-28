@@ -4,7 +4,6 @@ import { formatDate } from "../utils/date";
 import YouTubeVideo from "./YouTubeVideo.astro";
 
 const { entries: events, cacheHint } = await getEmDashCollection("events", {
-  orderBy: { published_at: "desc" },
   limit: 6,
 });
 
@@ -20,6 +19,7 @@ Astro.cache.set(cacheHint);
     {
       events
         .map((e) => e.data)
+        .sort((a, b) => b.date.localeCompare(a.date))
         .map((event) => (
           <div class="event">
             {event.youtube && (
